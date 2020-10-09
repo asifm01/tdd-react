@@ -1,0 +1,41 @@
+{
+  "name": "tdd-react-play",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "cypress": "^5.3.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.0.2",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  },
+  "scripts": {
+    "startserver": "nodemon --exec babel-node index.js",
+    "startclient": "onchange --initial public/**/*.jsx -- npm run build",
+    "run": "npm-run-all --parallel startserver startclient",
+    "build": "webpack --mode development --config webpack.config.js",
+    "test": "npx cypress open && REM npx cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asifm01/tdd-react.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asifm01/tdd-react/issues"
+  },
+  "homepage": "https://github.com/asifm01/tdd-react#readme"
+}
