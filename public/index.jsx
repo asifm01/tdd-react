@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 const App = () => {
     return (
         <>
-            This is a react app V2c! 
+            This is a react app! 
         </>
     )
 }
